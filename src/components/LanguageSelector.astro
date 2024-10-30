@@ -1,0 +1,21 @@
+---
+import { languages } from '../i18n/ui';
+
+const { currentLocale } = Astro;
+const path = Astro.url.pathname.replace(/^\/(en|es)/, '');
+---
+
+<div class="flex gap-2">
+  {Object.entries(languages).map(([lang, label]) => (
+    <a
+      href={lang === 'en' ? path : `/${lang}${path}`}
+      class={`px-3 py-1 rounded-lg text-sm ${
+        currentLocale === lang
+          ? 'bg-blue-600 text-white'
+          : 'bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700'
+      }`}
+    >
+      {label}
+    </a>
+  ))}
+</div>

@@ -4,28 +4,29 @@ import { getLangFromUrl, useTranslations } from '../utils/i18n';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-
 <section class="min-h-screen flex items-center justify-center py-20">
-    <div class="text-center">
-        <h1 class="text5-xl font-bold mb-6">
-            {t('hero.greeting')} 
-            <span class="text-blue-600 dark:text-blue-400">
-                {t('hero.name')}
-            </span>
-        </h1>
-        <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            {t('hero.description')}
-        </p>
-        <div class="flex gap-4 justify-center">
-            <a
-                href="#projects"
-                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
-            >
-                {t('hero.viewProjects')}
-            </a>
-        </div>
-
+  <div class="text-center">
+    <h1 class="text-5xl font-bold mb-6">
+      {t('hero.greeting')} <span class="text-blue-600 dark:text-blue-400">
+        {t('hero.name')}
+      </span>
+    </h1>
+    <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+      {t('hero.description')}
+    </p>
+    <div class="flex gap-4 justify-center">
+      <a
+        href="#projects"
+        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
+      >
+        {t('hero.viewProjects')}
+      </a>
+      <a
+        href="#contact"
+        class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors"
+      >
+        {t('hero.contact')}
+      </a>
     </div>
-    
-
+  </div>
 </section>
