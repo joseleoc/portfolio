@@ -1,3 +1,17 @@
+import KudoersLogo from '../assets/img/projects/kudoers/kudoers-logo.webp';
+import KudoersResults from '../assets/img/projects/kudoers/kudoers-results.jpg';
+import KudoersReading from '../assets/img/projects/kudoers/kudoers-reading.jpg';
+import KudoersRecognition from '../assets/img/projects/kudoers/kudoers-recognition.jpg';
+
+import TDHLogo from '../assets/img/projects/tdh-fest/tdh-fest-logo.png';
+import TDHForm from '../assets/img/projects/tdh-fest/tdh-form.jpg';
+import TDHLogin from '../assets/img/projects/tdh-fest/tdh-login.jpg';
+import TDHScanner from '../assets/img/projects/tdh-fest/tdh-scanner.jpg';
+
+import VeritiLogo from '../assets/img/projects/veriti/veriti-logo.jpg';
+import VeritiData from '../assets/img/projects/veriti/veriti-data.jpg';
+import VeritiSession from '../assets/img/projects/veriti/veriti-session.jpg';
+
 import type { languages } from "../i18n/ui";
 
 interface LocalizedProject {
@@ -35,9 +49,9 @@ export const projects: Project[] = [
         fullDescription: 'As a full-stack developer at Kudoers, I was responsible for crafting intuitive user interfaces and optimizing backend performance. My key achievements include: developing efficient algorithms to calculate complex relationship analytics, reducing load times by 98%, and creating dynamic node graphs that visualize these analytics in real-time. These enhancements have significantly improved the overall user experience and made Kudoers a valuable tool for teams seeking to recognize and celebrate their achievements.',
       },
     },
-    tags: ['Angular', 'Ionic', 'Firebase'],
-    image: 'kudoers-screenshot.png',
-    images: ['kudoers-feature1.png', 'kudoers-feature2.png', 'kudoers-architecture.png'],
+    tags: ['Angular', 'Ionic', 'Firebase', 'node.js', 'Typescript'],
+    image: KudoersLogo.src,
+    images: [KudoersLogo.src, KudoersResults.src, KudoersReading.src, KudoersRecognition.src],
     link: 'https://play.google.com/store/apps/details?id=com.innovarhyno.kudo.app&pcampaignid=web_share',
     github: ''
   },
@@ -55,9 +69,29 @@ export const projects: Project[] = [
       },
     },
     tags: ['React Native', 'Firebase', 'React', 'Cost estimation'],
-    image: 'tdh-fest-screenshot.png',
-    images: ['tdh-fest-registration.png', 'tdh-fest-mobile-app.png', 'tdh-fest-dashboard.png'],
+    image: TDHLogo.src,
+    images: [TDHLogo.src, TDHForm.src, TDHLogin.src, TDHScanner.src],
     github: 'https://github.com/lagoonStudios/TDHFest.scanner'
+  },
+  {
+    id: 'ask-teach',
+    localized: {
+      en: {
+        title: 'Ask Teach: Actionable Insights from Workshops',
+      description: 'Developed the frontend for an insights gathering platform.',
+      fullDescription: 'As a frontend developer, I played a key role in building the MVP for Ask Teach, a project aimed at gathering actionable insights from facilitated workshops. My responsibilities included collaborating with the team to design and develop the user interface, creating comprehensive documentation to guide future development, and contributing to cost estimation.',
+      },
+      es: {
+        title: 'Ask Teach: Actionable Insights from Workshops',
+      description: 'Developed the frontend for an insights gathering platform.',
+      fullDescription: 'As a frontend developer, I played a key role in building the MVP for Ask Teach, a project aimed at gathering actionable insights from facilitated workshops. My responsibilities included collaborating with the team to design and develop the user interface, creating comprehensive documentation to guide future development, and contributing to cost estimation.',
+      },
+    },
+    tags: ['React', 'Documentation', 'Cost Estimation'],
+    image: VeritiLogo.src,
+    images: [VeritiLogo.src, VeritiData.src, VeritiSession.src],
+    link: 'https://ask-teach.com', // Replace with actual link if applicable
+    github: 'https://github.com/your-username/ask-teach' // Replace with actual GitHub link if applicable
   },
   {
     id: 'ris-software',
@@ -98,24 +132,4 @@ export const projects: Project[] = [
     link: 'https://rolling-garage.com', // Replace with actual link if applicable
     github: 'https://github.com/your-username/rolling-garage' // Replace with actual GitHub link if applicable
   },
-  {
-    id: 'ask-teach',
-    localized: {
-      en: {
-        title: 'Ask Teach: Actionable Insights from Workshops',
-      description: 'Developed the frontend for an insights gathering platform.',
-      fullDescription: 'As a frontend developer, I played a key role in building the MVP for Ask Teach, a project aimed at gathering actionable insights from facilitated workshops. My responsibilities included collaborating with the team to design and develop the user interface, creating comprehensive documentation to guide future development, and contributing to cost estimation.',
-      },
-      es: {
-        title: 'Ask Teach: Actionable Insights from Workshops',
-      description: 'Developed the frontend for an insights gathering platform.',
-      fullDescription: 'As a frontend developer, I played a key role in building the MVP for Ask Teach, a project aimed at gathering actionable insights from facilitated workshops. My responsibilities included collaborating with the team to design and develop the user interface, creating comprehensive documentation to guide future development, and contributing to cost estimation.',
-      },
-    },
-    tags: ['React', 'Documentation', 'Cost Estimation'],
-    image: 'ask-teach-screenshot.png', // Replace with actual image path
-    images: ['ask-teach-feature1.png', 'ask-teach-feature2.png', 'ask-teach-wireframe.png'], // Replace with actual image paths
-    link: 'https://ask-teach.com', // Replace with actual link if applicable
-    github: 'https://github.com/your-username/ask-teach' // Replace with actual GitHub link if applicable
-  }
 ];
