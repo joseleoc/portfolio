@@ -43,20 +43,20 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'Oneg',
-    tags: ['NestJS', 'OpenIA', 'Elevenlabs', 'ChatGPT', 'DALL-E', 'Typescript'],
+    tags: ['NestJS', 'OpenIA', 'Elevenlabs', 'ChatGPT', 'DALL-E', 'MongoDB','Typescript'],
     image: OnegLogo.src,
     images: [OnegLoader.src, OnegLanding.src,OnegPricing.src, OnegStories.src],
     github: 'https://github.com/joseleoc/nest-template/tree/oneg',
     localized: {
       en: {
         title: "Oneg",
-        description: "Developed a mobile application to help users manage their daily tasks.",
-        fullDescription: "As a full-stack developer at Kudoers, I was responsible for crafting intuitive user interfaces and optimizing backend performance. My key achievements include: developing efficient algorithms to calculate complex relationship analytics, reducing load times by 98%, and creating dynamic node graphs that visualize these analytics in real-time. These enhancements have significantly improved the overall user experience and made Kudoers a valuable tool for teams seeking to recognize and celebrate their achievements.",
+        description: "Oneg is an AI-powered storytelling platform that allows users to create, manage, and interact with AI-generated stories.",
+        fullDescription: "Oneg is an AI-powered storytelling platform that empowers users to create, manage, and interact with AI-generated stories. Our platform leverages advanced AI models to generate captivating narratives, complete with text, images, and audio. Users can explore a diverse range of stories or create their own unique tales. The backend, built with NestJS and MongoDB, ensures seamless management of stories, including features like likes, views, and shares.",
       },
       es: {
         title: "Oneg",
-        description: "Desarrollé una aplicación móvil para ayudar a los usuarios a gestionar sus tareas diarias.",
-        fullDescription: "Como desarrollador full-stack en Kudoers, fui responsable de crear interfaces de usuario intuitivas y optimizar el rendimiento del backend. Mis principales logros incluyen: desarrollar algoritmos eficientes para calcular analíticas de relaciones complejas, reducir los tiempos de carga en un 98% y crear gráficos de nodos dinámicos que visualizan estas analíticas en tiempo real. Estas mejoras han mejorado significativamente la experiencia general del usuario y han convertido a Kudoers en una herramienta valiosa para los equipos que buscan reconocer y celebrar sus logros.",
+        description: "Oneg es una plataforma de narración impulsada por IA que permite a los usuarios crear, administrar e interactuar con historias generadas por IA.",
+        fullDescription: "Oneg es una plataforma de narración impulsada por IA que permite a los usuarios crear, administrar e interactuar con historias generadas por IA. Nuestra plataforma utiliza modelos de IA avanzados para generar narrativas cautivadoras, completas con texto, imágenes y audio. Los usuarios pueden explorar una amplia gama de historias o crear sus propias historias únicas. El backend, construido con NestJS y MongoDB, garantiza una gestión fluida de las historias, incluidas funciones como me gusta, vistas y compartidos.",
       }
     }
   },
