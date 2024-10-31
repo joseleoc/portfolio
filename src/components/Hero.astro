@@ -1,8 +1,10 @@
 ---
 import { getLangFromUrl, useTranslations } from '../utils/i18n';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const baseUrl = getRelativeLocaleUrl("es", "/");
 ---
 <section class="min-h-screen flex items-center justify-center py-20">
   <div class="text-center">
@@ -16,13 +18,13 @@ const t = useTranslations(lang);
     </p>
     <div class="flex gap-4 justify-center">
       <a
-        href="#projects"
+        href=`${baseUrl.replace(/\/$/, "")}/#projects`
         class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
       >
         {t('hero.viewProjects')}
       </a>
       <a
-        href="#contact"
+        href=`${baseUrl.replace(/\/$/, "")}/#contact`
         class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors"
       >
         {t('hero.contact')}

@@ -1,3 +1,9 @@
+import OnegLogo from '../assets/img/projects/oneg/oneg-logo.webp';
+import OnegLoader from '../assets/img/projects/oneg/oneg-loader.webp';
+import OnegLanding from '../assets/img/projects/oneg/oneg-landing.webp';
+import OnegPricing from '../assets/img/projects/oneg/oneg-pricing.webp';
+import OnegStories from '../assets/img/projects/oneg/oneg-stories.webp';
+
 import KudoersLogo from '../assets/img/projects/kudoers/kudoers-logo.webp';
 import KudoersResults from '../assets/img/projects/kudoers/kudoers-results.jpg';
 import KudoersReading from '../assets/img/projects/kudoers/kudoers-reading.jpg';
@@ -36,18 +42,37 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'Oneg',
+    tags: ['NestJS', 'OpenIA', 'Elevenlabs', 'ChatGPT', 'DALL-E', 'Typescript'],
+    image: OnegLogo.src,
+    images: [OnegLoader.src, OnegLanding.src,OnegPricing.src, OnegStories.src],
+    github: 'https://github.com/joseleoc/nest-template/tree/oneg',
+    localized: {
+      en: {
+        title: "Oneg",
+        description: "Developed a mobile application to help users manage their daily tasks.",
+        fullDescription: "As a full-stack developer at Kudoers, I was responsible for crafting intuitive user interfaces and optimizing backend performance. My key achievements include: developing efficient algorithms to calculate complex relationship analytics, reducing load times by 98%, and creating dynamic node graphs that visualize these analytics in real-time. These enhancements have significantly improved the overall user experience and made Kudoers a valuable tool for teams seeking to recognize and celebrate their achievements.",
+      },
+      es: {
+        title: "Oneg",
+        description: "Desarrollé una aplicación móvil para ayudar a los usuarios a gestionar sus tareas diarias.",
+        fullDescription: "Como desarrollador full-stack en Kudoers, fui responsable de crear interfaces de usuario intuitivas y optimizar el rendimiento del backend. Mis principales logros incluyen: desarrollar algoritmos eficientes para calcular analíticas de relaciones complejas, reducir los tiempos de carga en un 98% y crear gráficos de nodos dinámicos que visualizan estas analíticas en tiempo real. Estas mejoras han mejorado significativamente la experiencia general del usuario y han convertido a Kudoers en una herramienta valiosa para los equipos que buscan reconocer y celebrar sus logros.",
+      }
+    }
+  },
+  {
     id: 'kudoers-project',
     localized: {
       en: {
-        title: 'Kudoers Recognition Platform',
+        title: 'Kudoers',
         description: 'Developed a recognition platform to boost morale and foster a positive work environment.',
         fullDescription: 'As a full-stack developer at Kudoers, I was responsible for crafting intuitive user interfaces and optimizing backend performance. My key achievements include: developing efficient algorithms to calculate complex relationship analytics, reducing load times by 98%, and creating dynamic node graphs that visualize these analytics in real-time. These enhancements have significantly improved the overall user experience and made Kudoers a valuable tool for teams seeking to recognize and celebrate their achievements.',
       },
       es: {
-        title: 'Kudoers Recognition Platform',
-        description: 'Developed a recognition platform to boost morale and foster a positive work environment.',
-        fullDescription: 'As a full-stack developer at Kudoers, I was responsible for crafting intuitive user interfaces and optimizing backend performance. My key achievements include: developing efficient algorithms to calculate complex relationship analytics, reducing load times by 98%, and creating dynamic node graphs that visualize these analytics in real-time. These enhancements have significantly improved the overall user experience and made Kudoers a valuable tool for teams seeking to recognize and celebrate their achievements.',
-      },
+        title: 'Kudoers',
+        description: 'Desarrollamos una plataforma de reconocimiento para impulsar la moral y fomentar un ambiente de trabajo positivo.',
+        fullDescription: 'Como desarrollador full-stack en Kudoers, fui responsable de crear interfaces de usuario intuitivas y optimizar el rendimiento del backend. Mis principales logros incluyen: desarrollar algoritmos eficientes para calcular analíticas de relaciones complejas, reducir los tiempos de carga en un 98% y crear gráficos de nodos dinámicos que visualizan estas analíticas en tiempo real. Estas mejoras han mejorado significativamente la experiencia general del usuario y han convertido a Kudoers en una herramienta valiosa para los equipos que buscan reconocer y celebrar sus logros.',
+      }
     },
     tags: ['Angular', 'Ionic', 'Firebase', 'node.js', 'Typescript'],
     image: KudoersLogo.src,
@@ -90,8 +115,6 @@ export const projects: Project[] = [
     tags: ['React', 'Documentation', 'Cost Estimation'],
     image: VeritiLogo.src,
     images: [VeritiLogo.src, VeritiData.src, VeritiSession.src],
-    link: 'https://ask-teach.com', // Replace with actual link if applicable
-    github: 'https://github.com/your-username/ask-teach' // Replace with actual GitHub link if applicable
   },
   {
     id: 'ris-software',

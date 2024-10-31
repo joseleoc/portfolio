@@ -1,8 +1,9 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
 import { projects } from '../../../data/projects';
 import Navbar from '../../../components/Navbar.astro';
 import { getLangFromUrl, useTranslations } from '../../../utils/i18n';
+import Layout from '../../../layouts/layout.astro';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 export function getStaticPaths() {
   return projects.map(project => ({
@@ -14,13 +15,14 @@ export function getStaticPaths() {
 const { project } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const baseUrl = getRelativeLocaleUrl("es", "/");
 ---
 
 <Layout title={`${project.localized[lang].title} - Project Details`}>
   <Navbar />
   <main class="max-w-4xl mx-auto px-4 py-20">
     <a
-      href="/"
+      href={baseUrl}
       class="inline-block mb-8 text-blue-600 dark:text-blue-400 hover:underline"
     >
       {t('projects.backHome')}
@@ -33,13 +35,13 @@ const t = useTranslations(lang);
         <img
           src={image}
           alt={project.localized[lang].title}
-          class="rounded-lg shadow-lg w-full h-64 object-cover"
+          class="rounded-lg shadow-lg w-full h-64 object-contain  px-2"
         />
       ))}
     </div>
 
     <div class="prose dark:prose-invert max-w-none">
-      <p class="text-lg mb-6">{project.localized[lang].fullDescription}</p>
+      <p class="text-lg mb-6 text-pretty">{project.localized[lang].fullDescription}</p>
       
       <div class="flex flex-wrap gap-2 mb-8">
         {project.tags.map(tag => (

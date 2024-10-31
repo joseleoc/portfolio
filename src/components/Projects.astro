@@ -1,10 +1,12 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import { projects } from '../data/projects';
 import { getLangFromUrl, useTranslations } from '../utils/i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const featuredProjects = projects.slice(0, 3);
+const baseUrl = getRelativeLocaleUrl("es", "/");
 ---
 <section id="projects" class="py-20 px-4">
   <div class="max-w-6xl mx-auto">
@@ -16,6 +18,7 @@ const featuredProjects = projects.slice(0, 3);
             src={project.image}
             alt={project.localized[lang].title}
             class="w-full h-48 object-contain px-2"
+            transition:name={project.id}
           />
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">{project.localized[lang].title}</h3>
@@ -29,7 +32,7 @@ const featuredProjects = projects.slice(0, 3);
             </div>
             <div class="flex justify-end">
               <a
-                href={`/projects/${project.id}`}
+                href={`${baseUrl.replace(/\/$/, "")}/projects/${project.id}`}
                 class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
               >
                 {t('projects.learnMore')}
@@ -41,7 +44,7 @@ const featuredProjects = projects.slice(0, 3);
     </div>
     <div class="text-center mt-12">
       <a
-        href="/projects"
+        href=`${baseUrl.replace(/\/$/, "")}/projects`
         class="inline-block bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors"
       >
         {t('projects.viewAll')}
