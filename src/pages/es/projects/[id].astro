@@ -16,7 +16,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title={`${project.title} - Project Details`}>
+<Layout title={`${project.localized[lang].title} - Project Details`}>
   <Navbar />
   <main class="max-w-4xl mx-auto px-4 py-20">
     <a
@@ -26,20 +26,20 @@ const t = useTranslations(lang);
       {t('projects.backHome')}
     </a>
     
-    <h1 class="text-4xl font-bold mb-6">{project.title}</h1>
+    <h1 class="text-4xl font-bold mb-6">{project.localized[lang].title}</h1>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
       {project.images.map(image => (
         <img
           src={image}
-          alt={project.title}
+          alt={project.localized[lang].title}
           class="rounded-lg shadow-lg w-full h-64 object-cover"
         />
       ))}
     </div>
 
     <div class="prose dark:prose-invert max-w-none">
-      <p class="text-lg mb-6">{project.fullDescription}</p>
+      <p class="text-lg mb-6">{project.localized[lang].fullDescription}</p>
       
       <div class="flex flex-wrap gap-2 mb-8">
         {project.tags.map(tag => (
