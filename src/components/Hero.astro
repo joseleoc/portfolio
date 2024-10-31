@@ -4,10 +4,15 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const baseUrl = getRelativeLocaleUrl("es", "/");
+const baseUrl = getRelativeLocaleUrl(lang, "/");
 ---
-<section class="min-h-screen flex items-center justify-center py-20">
-  <div class="text-center">
+<section class="mt-20 flex items-center justify-center py-20" id="hero">
+  <div class="flex flex-col items-center justify-center text-center">
+    <img
+          src="https://github.com/joseleoc.png?size=160"
+          class="mb-3 aspect-square h-auto w-32 rounded-full md:w-40"
+          alt="Leonardo Contreras photo"
+        />
     <h1 class="text-5xl font-bold mb-6">
       {t('hero.greeting')} <span class="text-blue-600 dark:text-blue-400">
         {t('hero.name')}

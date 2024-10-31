@@ -6,7 +6,7 @@ import { getLangFromUrl, useTranslations } from '../utils/i18n';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const featuredProjects = projects.slice(0, 3);
-const baseUrl = getRelativeLocaleUrl("es", "/");
+const baseUrl = getRelativeLocaleUrl(lang, "/");
 ---
 <section id="projects" class="py-20 px-4">
   <div class="max-w-6xl mx-auto">
