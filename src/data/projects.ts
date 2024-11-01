@@ -173,10 +173,8 @@ export const projects: Project[] = [
       },
     },
     tags: ['React', 'Zustand', 'Firebase', 'Cost estimation'],
-    image: 'ris-software-screenshot.png', 
-    images: ['ris-profile-management.png', 'ris-task-assignment.png', 'ris-study-status.png'],
-    link: 'https://ris-software.com', 
-    github: 'https://github.com/your-username/ris-software'
+    image: '', 
+    images: [],
   },
   {
     id: 'rolling-garage',
@@ -193,9 +191,7 @@ export const projects: Project[] = [
       },
     },
     tags: ['Angular', 'Ionic',],
-    image: 'rolling-garage-screenshot.png', // Replace with actual image path
-    images: ['rolling-garage-group-rides.png', 'rolling-garage-community-forum.png', 'rolling-garage-mobile-app.png'], // Replace with actual image paths
-    link: 'https://rolling-garage.com', // Replace with actual link if applicable
-    github: 'https://github.com/your-username/rolling-garage' // Replace with actual GitHub link if applicable
+    image: '',
+    images: [],
   },
 ];

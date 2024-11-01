@@ -13,7 +13,7 @@ export const ui = {
     "nav.contact": "Contact",
     "hero.greeting": "Hi, I'm",
     "hero.description":
-      "A passionate full-stack developer crafting beautiful and functional web experiences.",
+      "Full Stack JavaScript Developer with 4 years of experience in web and backend development. Proficient in modern technologies such as Angular, React, Node.js, and databases like MongoDB and MySQL.",
     "hero.viewProjects": "View Projects",
     "hero.contact": "Contact Me",
     "hero.name": "Leonardo",
@@ -40,7 +40,7 @@ export const ui = {
     "nav.contact": "Contacto",
     "hero.greeting": "Hola, soy",
     "hero.description":
-      "Un desarrollador full-stack apasionado por crear experiencias web hermosas y funcionales.",
+      "Desarrollador Full Stack JavaScript con 4 años de experiencia en desarrollo web y backend. Experto en tecnologías modernas como Angular, React, Node.js, y bases de datos como MongoDB y MySQL.",
     "hero.viewProjects": "Ver Proyectos",
     "hero.contact": "Contáctame",
     "hero.name": "Leonardo",
