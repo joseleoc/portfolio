@@ -31,7 +31,7 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
     <h1 class="text-4xl font-bold mb-6">{project.localized[lang].title}</h1>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-      {project.images.map(image => (
+      {project.images.map((image, index) => (
         <img
           src={image}
           alt={project.localized[lang].title}

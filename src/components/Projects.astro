@@ -2,6 +2,7 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { projects } from '../data/projects';
 import { getLangFromUrl, useTranslations } from '../utils/i18n';
+import ProjectCard from './ProjectCard.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -13,33 +14,7 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
     <h2 class="text-3xl font-bold mb-12 text-center">{t('projects.title')}</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {featuredProjects.map(project => (
-        <div class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden transition-transform hover:scale-[1.02]">
-          <img
-            src={project.image}
-            alt={project.localized[lang].title}
-            class="w-full h-48 object-contain px-2"
-            transition:name={project.id}
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">{project.localized[lang].title}</h3>
-            <p class="text-gray-600 dark:text-gray-400 mb-4 text-pretty">{project.localized[lang].description}</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              {project.tags.map(tag => (
-                <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm">
-                  {tag}
-                </span>
-              ))}
-            </div>
-            <div class="flex justify-end">
-              <a
-                href={`${baseUrl.replace(/\/$/, "")}/projects/${project.id}`}
-                class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                {t('projects.learnMore')}
-              </a>
-          </div>
-          </div>
-        </div>
+        <ProjectCard project={project} />
       ))}
     </div>
     <div class="text-center mt-12">
