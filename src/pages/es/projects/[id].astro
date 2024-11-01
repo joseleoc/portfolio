@@ -41,7 +41,7 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
     </div>
 
     <div class="prose dark:prose-invert max-w-none">
-      <p class="text-lg mb-6 text-pretty">{project.localized[lang].fullDescription}</p>
+      <p id="project-full-description" class="text-lg mb-6 text-pretty">{project.localized[lang].fullDescription}</p>
       
       <div class="flex flex-wrap gap-2 mb-8">
         {project.tags.map(tag => (
@@ -76,3 +76,18 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
     </div>
   </main>
 </Layout>
+
+
+<script>
+  function initProjectDescription() {
+    const element = document.getElementById('project-full-description');
+    const text = element?.innerText;
+    if(element && text){
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(text, 'text/html');
+      element.innerHTML = '';
+      element?.appendChild(doc.body);
+    }
+  };
+  initProjectDescription();
+</script>

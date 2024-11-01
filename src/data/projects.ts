@@ -46,17 +46,60 @@ export const projects: Project[] = [
     tags: ['NestJS', 'OpenIA', 'Elevenlabs', 'ChatGPT', 'DALL-E', 'MongoDB','Typescript'],
     image: OnegLogo.src,
     images: [OnegLoader.src, OnegLanding.src,OnegPricing.src, OnegStories.src],
-    github: 'https://github.com/joseleoc/nest-template/tree/oneg',
+    // github: 'https://github.com/joseleoc/nest-template/tree/oneg',
     localized: {
       en: {
         title: "Oneg",
-        description: "Oneg is an AI-powered storytelling platform that allows users to create, manage, and interact with AI-generated stories.",
-        fullDescription: "Oneg is an AI-powered storytelling platform that empowers users to create, manage, and interact with AI-generated stories. Our platform leverages advanced AI models to generate captivating narratives, complete with text, images, and audio. Users can explore a diverse range of stories or create their own unique tales. The backend, built with NestJS and MongoDB, ensures seamless management of stories, including features like likes, views, and shares.",
+        description: "Oneg is an AI-powered storytelling platform that provides a personalized storytelling experience for children. As a backend developer, I was responsible for designing and building the entire backend infrastructure of Oneg, using technologies such as NestJS and MongoDB.",
+        fullDescription: `
+        <p>Oneg is an AI-powered storytelling platform that provides a personalized storytelling experience for children. As a backend developer, I was responsible for designing and building the entire backend infrastructure of Oneg, using technologies such as NestJS and MongoDB.</p>
+        <br />
+        <h6 class="font-bold">My main contributions include:</h6>
+        <br />
+        <ul class="list-disc list-inside">
+          <li>
+            <strong>Backend development:</strong> Creating a scalable and efficient architecture to manage the generation, storage, and delivery of stories.
+          </li>
+          <li>
+            <strong>AI integration:</strong> Implementing AI models to generate high-quality visual and textual content, as well as integrating ElevenLabs for personalized voice generation.
+          </li>
+          <li>
+            <strong>Cloud management:</strong> Using AWS S3 to store all platform assets and MongoDB Atlas as a NoSQL database.
+          </li>
+          <li>
+            <strong>Deployment and maintenance:</strong> Ensuring the stability and performance of the platform in production.
+          </li>
+        </ul>
+        <br />
+        <p>Through my work on Oneg, I have demonstrated my ability to solve complex problems, apply cutting-edge technologies, and build scalable solutions.</p>
+
+        `,
       },
       es: {
         title: "Oneg",
-        description: "Oneg es una plataforma de narración impulsada por IA que permite a los usuarios crear, administrar e interactuar con historias generadas por IA.",
-        fullDescription: "Oneg es una plataforma de narración impulsada por IA que permite a los usuarios crear, administrar e interactuar con historias generadas por IA. Nuestra plataforma utiliza modelos de IA avanzados para generar narrativas cautivadoras, completas con texto, imágenes y audio. Los usuarios pueden explorar una amplia gama de historias o crear sus propias historias únicas. El backend, construido con NestJS y MongoDB, garantiza una gestión fluida de las historias, incluidas funciones como me gusta, vistas y compartidos.",
+        description: "Oneg es una plataforma de narración impulsada por IA que ofrece una experiencia de storytelling personalizada para niños. Como desarrollador backend, he sido responsable de diseñar y construir toda la infraestructura backend de Oneg, utilizando tecnologías como NestJS y MongoDB.",
+        fullDescription: `
+        <p>Oneg es una plataforma de narración impulsada por IA que ofrece una experiencia de storytelling personalizada para niños. Como desarrollador backend he sido responsable de diseñar y construir toda la infraestructura backend de Oneg, utilizando tecnologías como NestJS y MongoDB.</p>
+        <br />
+        <h6 class="font-bold">Mis principales contribuciones incluyen:</h6>
+        <br />
+        <ul class="list-disc list-inside">
+          <li>
+            <strong>Desarrollo del backend:</strong> Creación de una arquitectura escalable y eficiente para gestionar la generación, almacenamiento y entrega de historias.
+          </li>
+          <li>
+            <strong>Integración de IA:</strong> Implementación de modelos de IA para generar contenido visual y textual de alta calidad, así como la integración de ElevenLabs para la generación de voces personalizadas.
+          </li>
+          <li>
+            <strong>Gestión de la nube: </strong> Utilización de AWS S3 para almacenar todos los activos de la plataforma y MongoDB Atlas como base de datos NoSQL.
+          </li>
+          <li>
+            <strong>Despliegue y mantenimiento: </strong> Asegurar la estabilidad y el rendimiento de la plataforma en producción.
+          </li>
+        </ul>
+        <br />
+        <p>A través de mi trabajo en Oneg, he demostrado mi capacidad para resolver problemas complejos, aplicar tecnologías de vanguardia y construir soluciones escalables.</p>
+        `,
       }
     }
   },
