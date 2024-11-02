@@ -37,6 +37,7 @@ const { project } = Astro.props;
       </div>
       <div class="flex justify-end">
         <a
+          title=`${project.localized[lang].title} project`
           href={`${baseUrl.replace(/\/$/, "")}/projects/${project.id}`}
           class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
         >

@@ -8,11 +8,13 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
 ---
 <section class="mt-20 flex items-center justify-center py-20" id="hero">
   <div class="flex flex-col items-center justify-center text-center">
-    <img
-          src="https://github.com/joseleoc.png?size=160"
-          class="mb-3 aspect-square h-auto w-32 rounded-full md:w-40"
-          alt="Leonardo Contreras photo"
-        />
+    <figure class="mb-3">
+      <img
+        src="https://github.com/joseleoc.png?size=160"
+        class="aspect-square h-auto w-32 rounded-full md:w-40"
+        alt="Leonardo Contreras photo"
+      />
+    </figure>
     <h1 class="text-5xl font-bold mb-6 mx-2">
       {t('hero.greeting')} <span class="text-blue-600 dark:text-blue-400">
         {t('hero.name')}
@@ -21,7 +23,7 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
     <p class="text-xl text-pretty text-gray-600 dark:text-gray-400 mb-8 max-w-2xl md:mx-auto mx-2">
       {t('hero.description')}
     </p>
-    <div class="flex gap-4 justify-center">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a
         href=`${baseUrl.replace(/\/$/, "")}/#projects`
         class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
@@ -33,6 +35,15 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
         class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors"
       >
         {t('hero.contact')}
+      </a>
+
+      <a
+        title="Leonardo Contreras Resume"
+        href={lang === 'en' ? '/Resume-Leonardo-Contreras-en.pdf' : '/Resume-Leonardo-Contreras-es.pdf' }
+        download="Leonardo-Contreras-Resume.pdf"
+        class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors"
+      >
+        {t('hero.cv')}
       </a>
     </div>
   </div>

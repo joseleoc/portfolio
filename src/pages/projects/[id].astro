@@ -22,26 +22,17 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
   <Navbar />
   <main class="max-w-4xl mx-auto px-4 py-20">
     <a
-      href={baseUrl}
+      href={`${baseUrl.replace(/\/$/, "")}/projects`}
       class="inline-block mb-8 text-blue-600 dark:text-blue-400 hover:underline"
     >
-      {t('projects.backHome')}
+      {t('project.backToProjects')}
     </a>
     
     <h1 class="text-4xl font-bold mb-6">{project.localized[lang].title}</h1>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-      {project.images.map(image => (
-        <img
-          src={image}
-          alt={project.localized[lang].title}
-          class="rounded-lg shadow-lg w-full h-64 object-contain  px-2"
-        />
-      ))}
-    </div>
-
+  
     <div class="prose dark:prose-invert max-w-none">
-      <div id="project-full-description" class="text-lg mb-6 text-pretty">{project.localized[lang].fullDescription}</div>
+      <div id="project-full-description" class="text-lg mb-6 text-pretty" set:html={project.localized[lang].fullDescription}>
+      </div>
       
       <div class="flex flex-wrap gap-2 mb-8">
         {project.tags.map(tag => (
@@ -57,6 +48,7 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit project website"
             class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
           >
             {t('projects.viewSite')}
@@ -67,6 +59,7 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit project GitHub repository"
             class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors"
           >
             {t('projects.viewCode')}
@@ -74,20 +67,15 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
         )}
       </div>
     </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      {project.images.map(image => (
+        <img
+          src={image}
+          alt={project.localized[lang].title}
+          class="rounded-lg shadow-lg w-full h-64 object-contain  px-2"
+        />
+      ))}
+    </div>
   </main>
 </Layout>
-
-
-<script>
-  function initProjectDescription() {
-    const element = document.getElementById('project-full-description');
-    const text = element?.innerText;
-    if(element && text){
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(text, 'text/html');
-      element.innerHTML = '';
-      element?.appendChild(doc.body);
-    }
-  };
-  initProjectDescription();
-</script>
