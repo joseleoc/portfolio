@@ -57,6 +57,6 @@ export const experiences: Experience[] = [
       }
     },
     company: "Innova Rhyno",
-    technologies: ["React", "TypeScript", "GraphQL"]
+    technologies: ["Angular", "Ionic", "Firebase", "NodeJS", "Google Maps / Mabpox"]
   }
 ];

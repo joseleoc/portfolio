@@ -1,6 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from '../utils/i18n';
 import { getRelativeLocaleUrl } from 'astro:i18n';
+import avatar from '../assets/img/avatar.jpg'
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -10,9 +11,10 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
   <div class="flex flex-col items-center justify-center text-center">
     <figure class="mb-3">
       <img
-        src="https://github.com/joseleoc.png?size=160"
-        class="aspect-square h-auto w-32 rounded-full md:w-40"
-        alt="Leonardo Contreras photo"
+      class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover object-top"
+      alt="Leonardo Contreras"
+      title="Leonardo Contreras's Avatar"
+      src={avatar.src}
       />
     </figure>
     <h1 class="text-5xl font-bold mb-6 mx-2">
@@ -20,9 +22,10 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
         {t('hero.name')}
       </span>
     </h1>
-    <p class="text-xl text-pretty text-gray-600 dark:text-gray-400 mb-8 max-w-2xl md:mx-auto mx-2">
-      {t('hero.description')}
-    </p>
+    <span class="text-xl text-balance text-gray-600 dark:text-gray-400 mb-8 max-w-2xl md:mx-auto mx-2">
+      <span class="text-3xl text-blue-600 font-semibold">{t('hero.description-1')}</span>
+      {t('hero.description-2')}
+    </span>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a
         href=`${baseUrl.replace(/\/$/, "")}/#projects`

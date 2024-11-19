@@ -12,8 +12,9 @@ export const ui = {
     "nav.experience": "Experience",
     "nav.contact": "Contact",
     "hero.greeting": "Hi, I'm",
-    "hero.description":
-      "Full Stack JavaScript Developer with 4 years of experience in web and backend development. Proficient in modern technologies such as Angular, React, Node.js, and databases like MongoDB and MySQL.",
+    "hero.description-1":"Full Stack Developer ",
+    "hero.description-2":
+      "with 4 years of experience in web and backend development.",
     "hero.viewProjects": "View Projects",
     "hero.contact": "Contact Me",
     "hero.name": "Leonardo",
@@ -28,7 +29,6 @@ export const ui = {
     "project.backToProjects": "← Back to Projects",
     "experience.title": "Experience",
     "contact.title": "Get in Touch",
-    "contact.getInTouch": "Let's Connect",
     "contact.description":
       "I'm always interested in hearing about new projects and opportunities. Feel free to reach out!",
     "contact.name": "Name",
@@ -41,8 +41,9 @@ export const ui = {
     "nav.experience": "Experiencia",
     "nav.contact": "Contacto",
     "hero.greeting": "Hola, soy",
-    "hero.description":
-      "Desarrollador Full Stack JavaScript con 4 años de experiencia en desarrollo web y backend. Experto en tecnologías modernas como Angular, React, Node.js, y bases de datos como MongoDB y MySQL.",
+    "hero.description-1":"Desarrollador Full Stack ",
+    "hero.description-2":
+      "con 4 años de experiencia en desarrollo web y backend.",
     "hero.viewProjects": "Ver Proyectos",
     "hero.contact": "Contáctame",
     "hero.name": "Leonardo",
@@ -57,7 +58,6 @@ export const ui = {
     "project.backToProjects": "← Volver a Proyectos",
     "experience.title": "Experiencia",
     "contact.title": "Contacto",
-    "contact.getInTouch": "Conectemos",
     "contact.description":
       "Siempre estoy interesado en escuchar sobre nuevos proyectos y oportunidades. ¡No dudes en contactarme!",
     "contact.name": "Nombre",

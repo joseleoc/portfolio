@@ -11,7 +11,7 @@ const t = useTranslations(lang);
 const baseUrl = getRelativeLocaleUrl(lang, "/");
 ---
 
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg">
   <div class="container mx-auto px-4 py-3 flex justify-between items-center">
     <div class="flex items-center gap-8">
       <a href={`${baseUrl}#hero`} class="text-xl font-bold">Portfolio</a>
@@ -33,33 +33,3 @@ const baseUrl = getRelativeLocaleUrl(lang, "/");
     </div>
   </div>
 </nav>
-
-<script>
-  const navbar = document.getElementById('navbar');
-
-  function updateNavbar() {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 50) {
-      navbar?.classList.add('bg-white/80', 'dark:bg-gray-900/80', 'backdrop-blur-md', 'shadow-lg');
-    } else {
-      navbar?.classList.remove('bg-white/80', 'dark:bg-gray-900/80', 'backdrop-blur-md', 'shadow-lg');
-    }
-
-  }
-
-  window.addEventListener('scroll', updateNavbar);
-  document.addEventListener('astro:after-swap', updateNavbar);
-
-  // Smooth scroll for navigation links
-  document.querySelectorAll(`a[href^="/"]`).forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      if(anchor.getAttribute('href')?.includes('#') === false) return;
-      e.preventDefault();
-      const targetId = anchor.getAttribute('href')?.split('#')[1];
-      const target = document.querySelector(`#${targetId}` || '');
-      target?.scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>

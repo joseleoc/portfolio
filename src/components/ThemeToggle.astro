@@ -19,6 +19,5 @@
     element.classList.toggle("dark");
     localStorage.setItem("theme", element.classList.contains("dark") ? "dark" : "light");
   }
-
-  document.getElementById("theme-toggle")?.addEventListener("click", toggleTheme);
+  document.querySelectorAll("#theme-toggle")[0].addEventListener("click", toggleTheme);
 </script>

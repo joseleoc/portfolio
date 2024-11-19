@@ -50,11 +50,12 @@ export const projects: Project[] = [
     localized: {
       en: {
         title: "Oneg",
-        description: "Oneg is an AI-powered storytelling platform that provides a personalized storytelling experience for children. As a backend developer, I was responsible for designing and building the entire backend infrastructure of Oneg, using technologies such as NestJS and MongoDB.",
+        description: "Oneg is a mobile app for creating children's stories using artificial intelligence. It generates AI-written texts, colorful images to illustrate the stories, and uses Elevenlabs for text-to-speech conversion, providing an immersive experience.",
         fullDescription: `
-        <div>
-          <h2 class="font-bold">Oneg: An AI-Powered Storytelling Platform</h2>
-          <p>As a backend developer, I played a crucial role in designing and building the entire backend infrastructure of Oneg, an innovative AI-powered storytelling platform that provides personalized experiences for children.</p>
+        <section>
+          <p>Oneg is a mobile application designed for creating children's stories using artificial intelligence. The platform generates unique texts with AI, complemented by colorful images to set the scene for the stories, and leverages Elevenlabs for text-to-speech conversion, providing an immersive experience.</p>
+          
+          <p class="mt-2">My role in the project involves end-to-end backend development, including architecture design and business logic implementation. This includes creating a REST API, integrating with OpenAI APIs, using MongoDB as the database, developing documentation, implementing CRUD functionalities, managing deployments with Continuous Integration (CI), and writing tests to ensure code quality.</p>
           <br />
           <h3 class="font-bold">My main contributions include:</h3>
           <br />
@@ -74,16 +75,16 @@ export const projects: Project[] = [
           </ul>
           <br />
           <p>Through my work on Oneg, I have demonstrated my ability to solve complex problems, apply cutting-edge technologies, and build scalable solutions.</p>
-        </div>
+        </section>
         `,
       },
       es: {
         title: "Oneg",
-        description: "Oneg es una plataforma de narración impulsada por IA que ofrece una experiencia de storytelling personalizada para niños. Como desarrollador backend, he sido responsable de diseñar y construir toda la infraestructura backend de Oneg, utilizando tecnologías como NestJS y MongoDB.",
+        description: "Oneg es una aplicación móvil para la creación de cuentos infantiles utilizando inteligencia artificial. Genera textos con IA, imágenes coloridas para ambientar las historias y utiliza Elevenlabs para convertir texto a voz, ofreciendo una experiencia inmersiva.",
         fullDescription: `
-        <div>
-          <h2 class="font-bold">Oneg: Una Plataforma de Narración de Historias Impulsada por IA</h2>
-          <p>Como desarrollador backend, desempeñé un papel crucial en el diseño y construcción de toda la infraestructura backend de Oneg, una innovadora plataforma de narración de historias impulsada por IA que brinda experiencias personalizadas para niños.</p>
+        <section>
+          <p>Oneg es una aplicación móvil diseñada para la creación de cuentos infantiles mediante inteligencia artificial. La plataforma genera textos únicos con IA, los cuales se complementan con imágenes coloridas para ambientar las historias, además de utilizar Elevenlabs para convertir el texto a voz, ofreciendo una experiencia inmersiva.</p>
+          <p class="mt-2">Mi rol en el proyecto incluye el desarrollo completo del backend, desde la arquitectura hasta la lógica de negocio. Esto abarca la creación de una API REST, la integración con las API de OpenAI, el uso de MongoDB como base de datos, la creación de documentación, la implementación de funcionalidades CRUD, así como despliegues utilizando integración continua (CI) y la escritura de pruebas para garantizar la calidad del código.</p>
           <br />
           <h3 class="font-bold">Mis principales contribuciones incluyen:</h3>
           <br />
@@ -103,7 +104,7 @@ export const projects: Project[] = [
           </ul>
           <br />
           <p>A través de mi trabajo en Oneg, he demostrado mi capacidad para resolver problemas complejos, aplicar tecnologías de vanguardia y construir soluciones escalables.</p>
-        </div>
+        </section>
         `,
       }
     }
@@ -113,52 +114,28 @@ export const projects: Project[] = [
     localized: {
       en: {
         title: 'Kudoers',
-        description: 'Developed a recognition platform to boost morale and foster a positive work environment.',
+        description: 'Kudoers is a mobile application that fosters a collaborative work environment by enabling team members to send recognitions (kudos) to each other.',
         fullDescription: `
-        <div>
-          <h2 class="font-bold">Kudoers</h2>
-          <p>Developed a recognition platform to boost morale and foster a positive work environment.</p>
-          <br />
-          <h3 class="font-bold">My main contributions include:</h3>
-          <br />
-          <ul class="list-disc list-inside">
-            <li>
-              <strong>Full-stack development:</strong> Creating intuitive user interfaces and optimizing backend performance.
-            </li>
-            <li>
-              <strong>Efficient algorithms:</strong> Developing algorithms to calculate complex relationship analytics, reducing load time considerably.
-            </li>
-            <li>
-              <strong>Dynamic visualizations:</strong> Creating dynamic node graphs that visualize these analytics in real-time.
-            </li>
-          </ul>
-          <br />
-          <p>These improvements have significantly enhanced the overall user experience and made Kudoers a valuable tool for teams seeking to recognize and celebrate their achievements.</p>
-        </div>
+          <section class="flex flex-col gap-2 mt-2">
+            <p>This is a mobile application designed to promote a positive and collaborative work environment by enabling team members to send recognitions (kudos) to one another. The app also includes periodic reading sessions to share these recognitions as a group.<p>
+            <p>My main role focused on frontend development using <strong>Angular</strong> and <strong>Ionic</strong>, as well as implementing <strong>Firebase</strong> functions as a backend to analyze relationships between team members. This analysis leveraged matrix theory and graph models to visualize interactions and the number of kudos exchanged among team members. We also used <strong>Firestore</strong> as the database to ensure efficient, real-time storage.</p>
+            <p>Additionally, I helped implement functionalities for team-based room management, where each team could only have one active room at a time. When a room was opened, all team members were automatically notified, encouraging participation in the recognition sessions. </p>
+            <p>We worked following the <strong>SCRUM</strong> methodology, which allowed for continuous organization and product delivery.</p>
+            <p>Furthermore, I was a key advocate for integrating unit testing into the project, successfully establishing a unit testing environment to ensure code quality and catch errors early in development. I also made significant contributions to developing frontend screens where these graphs and detailed analyses are displayed.</p>
+          </section>
         `,
       },
       es: {
         title: 'Kudoers',
-        description: 'Desarrollamos una plataforma de reconocimiento para impulsar la moral y fomentar un ambiente de trabajo positivo.',
+        description: 'Kudoers es una aplicación móvil que promueve un entorno laboral colaborativo mediante el envío de reconocimientos (kudos) entre miembros de equipos.',
         fullDescription: `
-        <div>
-          <h2 class="font-bold">Kudoers</h2> <p>Desarrollamos una plataforma de reconocimiento para impulsar la moral y fomentar un ambiente de trabajo positivo.</p> <br />
-          <h3 class="font-bold">Mis principales contribuciones incluyen:</h3>
-          <br />
-          <ul class="list-disc list-inside">
-            <li>
-              <strong>Desarrollo full-stack:</strong> Creación de interfaces de usuario intuitivas y optimización del rendimiento del backend.
-            </li>
-            <li>
-              <strong>Algoritmos eficientes:</strong> Desarrollo de algoritmos para calcular analíticas de relaciones complejas, reduciendo los tiempos de carga considerablemente.
-            </li>
-            <li>
-              <strong>Visualizaciones dinámicas:</strong> Creación de gráficos de nodos dinámicos que visualizan estas analíticas en tiempo real.
-            </li>
-          </ul>
-          <br />
-          <p>Estas contribuciones han mejorado significativamente la experiencia general del usuario y han convertido a Kudoers en una herramienta valiosa para los equipos que buscan reconocer y celebrar sus logros.</p>
-          </div>
+          <section class="flex flex-col gap-2 mt-2">
+            <p>Es una aplicación móvil diseñada para fomentar un entorno de trabajo agradable y colaborativo mediante el envío de reconocimientos (kudos) entre los miembros de un equipo. La app también permite realizar salas de lectura periódicas para compartir estos reconocimientos en grupo. </p>
+            <p>Mi trabajo se centró principalmente en el desarrollo del frontend utilizando Angular e Ionic, además de implementar funciones en Firebase como backend para realizar análisis de las relaciones entre los miembros del equipo. Este análisis se basó en teoría de matrices y gráficos, permitiendo visualizar las interacciones y la cantidad de kudos enviados entre los integrantes. También utilizamos Firestore como base de datos para garantizar un almacenamiento eficiente y en tiempo real.</p>
+            <p>Adicionalmente, ayudé a implementar funcionalidades para la gestión de salas por equipo, donde cada equipo solo podía tener una sala abierta al mismo tiempo. Al abrirse una sala, todos los miembros del equipo eran notificados automáticamente, fomentando la participación en las sesiones de reconocimiento.</p>
+            <p>Además, trabajamos siguiendo la metodología SCRUM, lo que permitió mantener una organización y entrega continua del producto.</p>
+            <p>Por otra parte, fui un defensor clave de la integración de pruebas unitarias en el proyecto, logrando que se implementara un entorno de test unitarios para garantizar la calidad del código y prevenir errores desde etapas tempranas del desarrollo. También contribuí significativamente al desarrollo de pantallas para el frontend, donde se muestran gráficos y análisis detallados sobre las relaciones y los kudos intercambiados.</p>
+          </section>
         `,
       }
     },
