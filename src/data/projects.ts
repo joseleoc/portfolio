@@ -1,10 +1,10 @@
-import OnegLogo from '../assets/img/projects/oneg/oneg-logo.webp';
+import OnegLogo from '../assets/img/projects/oneg/oneg-logo.svg';
 import OnegLoader from '../assets/img/projects/oneg/oneg-loader.webp';
 import OnegLanding from '../assets/img/projects/oneg/oneg-landing.webp';
 import OnegPricing from '../assets/img/projects/oneg/oneg-pricing.webp';
 import OnegStories from '../assets/img/projects/oneg/oneg-stories.webp';
 
-import KudoersLogo from '../assets/img/projects/kudoers/kudoers-logo.webp';
+import KudoersLogo from '../assets/img/projects/kudoers/kudoers-logo.svg';
 import KudoersResults from '../assets/img/projects/kudoers/kudoers-results.webp';
 import KudoersReading from '../assets/img/projects/kudoers/kudoers-reading.webp';
 import KudoersRecognition from '../assets/img/projects/kudoers/kudoers-recognition.webp';
@@ -14,7 +14,7 @@ import TDHForm from '../assets/img/projects/tdh-fest/tdh-form.webp';
 import TDHLogin from '../assets/img/projects/tdh-fest/tdh-login.webp';
 import TDHScanner from '../assets/img/projects/tdh-fest/tdh-scanner.webp';
 
-import VeritiLogo from '../assets/img/projects/veriti/veriti-logo.webp';
+import VeritiLogoDark from '../assets/img/projects/veriti/veriti-logo-dark.png';
 import VeritiData from '../assets/img/projects/veriti/veriti-data.webp';
 import VeritiSession from '../assets/img/projects/veriti/veriti-session.webp';
 
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     tags: ['NestJS', 'OpenIA', 'Elevenlabs', 'ChatGPT', 'DALL-E', 'MongoDB','Typescript'],
     image: OnegLogo.src,
     images: [OnegLoader.src, OnegLanding.src,OnegPricing.src, OnegStories.src],
-    // github: 'https://github.com/joseleoc/nest-template/tree/oneg',
+    link: "https://play.google.com/store/apps/details?id=com.oneg.app",
     localized: {
       en: {
         title: "Oneg",
@@ -207,8 +207,8 @@ export const projects: Project[] = [
       },
     },
     tags: ['React', 'Documentation', 'Cost Estimation'],
-    image: VeritiLogo.src,
-    images: [VeritiLogo.src, VeritiData.src, VeritiSession.src],
+    image: VeritiLogoDark.src,
+    images: [VeritiData.src, VeritiSession.src],
   },
   {
     id: 'ris-software',
