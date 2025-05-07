@@ -2,6 +2,11 @@
   "name": "portfolio",
   "type": "module",
   "version": "0.0.1",
+  "author": {
+    "name": "Leonardo contreras",
+    "email": "joseleoc123@gmail.com",
+    "url": "https://joseleoc.com"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
