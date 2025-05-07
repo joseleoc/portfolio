@@ -1,7 +1,7 @@
 ---
-import { getRelativeLocaleUrl } from 'astro:i18n';
-import { getLangFromUrl, useTranslations } from '../utils/i18n';
-import type { Project } from '../data/projects';
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLangFromUrl, useTranslations } from "../utils/i18n";
+import type { Project } from "../data/projects";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -14,35 +14,40 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<div class="flex flex-col bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden transition-transform hover:scale-[1.02]">
-    {project.image && 
+<div
+  class="flex flex-col bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden transition-transform hover:scale-[1.02]">
+  {
+    project.image && (
       <img
         src={project.image}
         alt={project.localized[lang].title}
         class="w-full h-48 object-contain px-4 pt-3 text-red"
         transition:name={project.id}
       />
-    }
-    <div class="flex flex-col justify-between flex-1 gap-5 p-6">
-      <div>
-        <h3 class="text-xl font-bold mb-2">{project.localized[lang].title}</h3>
-        <p class="text-gray-600 dark:text-gray-400 mb-4 text-pretty">{project.localized[lang].description}</p>
-        <div class="flex flex-wrap gap-2 ">
-          {project.tags.map(tag => (
-            <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm">
-              {tag}
-            </span>
-          ))}
-        </div>
+    )
+  }
+  <div class="flex flex-col justify-between flex-1 gap-5 p-6">
+    <div>
+      <h3 class="text-xl font-bold mb-2">{project.localized[lang].title}</h3>
+      <p class="text-gray-600 dark:text-gray-400 mb-4 text-pretty">
+        {project.localized[lang].description}
+      </p>
+      <div class="flex flex-wrap gap-2">
+        {
+          project.tags.map((tag) => (
+            <span class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm">{tag}</span>
+          ))
+        }
       </div>
-      <div class="flex justify-end">
-        <a
-          title=`${project.localized[lang].title} project`
-          href={`${baseUrl.replace(/\/$/, "")}/projects/${project.id}`}
-          class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          {t('projects.learnMore')}
-        </a>
     </div>
+    <div class="flex justify-end">
+      <a
+        title=`${project.localized[lang].title} project`
+        href={`${baseUrl.replace(/\/$/, "")}/projects/${project.id}`}
+        aria-label=`${project.localized[lang].title} project`
+        class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+        {t("projects.learnMore")}
+      </a>
     </div>
   </div>
+</div>
