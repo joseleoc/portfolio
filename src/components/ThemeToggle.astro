@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <button
@@ -21,7 +22,7 @@
   </svg>
 </button>
 
-<script is:inline>
+<script>
   function toggleTheme() {
     console.log("toggle");
     const element = document.documentElement;
@@ -35,7 +36,7 @@
 
   document
     .querySelector("#theme-toggle")
-    .addEventListener("click", toggleTheme);
+    ?.addEventListener("click", toggleTheme);
 
   if (localStorage.getItem("theme") === "dark") {
     document.documentElement.classList.add("dark");

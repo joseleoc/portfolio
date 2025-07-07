@@ -4,7 +4,6 @@ import Navbar from "../../components/Navbar.astro";
 import { getLangFromUrl, useTranslations } from "../../utils/i18n";
 import Layout from "../../layouts/Layout.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import { Image } from "astro:assets";
 
 export function getStaticPaths() {
   return projects.map((project) => ({
