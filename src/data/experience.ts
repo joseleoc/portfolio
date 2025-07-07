@@ -19,6 +19,15 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     localized: {
+      en: { title: "Fullstack Developer", period: "2024 - Present", description: ["Development of backend applications with AI integration (Text, image and audio generation with AI).", "Deployments in AWS.","Maintenance of existing projects in vanilla Javascript and Arango DB.", "Creation of internal application dashboards (Fullstack)."], },
+      es: { title: "Fullstack Developer", period: "2024 - Present", description: ["Desarrollo de aplicaciones de backend con integración de Inteligencia Artificial (Generación de textos, imágenes y audios con IA).", "Despliegues en AWS.","Mantenimiento de proyectos existentes en vanilla Javascript y Arango DB.", "Creación de dashboards de administración interna de aplicaciones (Fullstack)."], },
+
+    },
+    company: "Denkiu Agency",
+    technologies: ["ChatGPT", "OpenAI", "NodeJS", "AWS","Serverless", "Express", "Nestjs", "React", "Arango DB"]
+  },
+  {
+    localized: {
       en: {
         title: "Fullstack Developer",
         period: "2022 - Present",
@@ -31,7 +40,7 @@ export const experiences: Experience[] = [
       }
     },
     company: "Lagoon Studios",
-    technologies: ["React.js", "React native", "TypeScript","Firebase", "Jest"]
+    technologies: ["React", "React Native", "TypeScript", "Firebase", "Jest"]
   },
   {
     localized: {

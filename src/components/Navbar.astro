@@ -1,35 +1,46 @@
 ---
-import ThemeToggle from './ThemeToggle.astro';
-import LanguageSelector from './LanguageSelector.astro';
-import { getLangFromUrl, useTranslations } from '../utils/i18n';
-import { getRelativeLocaleUrl } from 'astro:i18n';
+import ThemeToggle from "./ThemeToggle.astro";
+import LanguageSelector from "./LanguageSelector.astro";
+import { getLangFromUrl, useTranslations } from "../utils/i18n";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-
 const baseUrl = getRelativeLocaleUrl(lang, "/");
 ---
 
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg">
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
+>
   <div class="container mx-auto px-4 py-3 flex justify-between items-center">
     <div class="flex items-center gap-8">
       <a href={`${baseUrl}#hero`} class="text-xl font-bold">Portfolio</a>
       <div class="hidden md:flex gap-6">
-        <a href={`${baseUrl}#projects`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-          {t('nav.projects')}
+        <a
+          href={`${baseUrl}#projects`}
+          class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        >
+          {t("nav.projects")}
         </a>
-        <a href={`${baseUrl}#experience`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-          {t('nav.experience')}
+        <a
+          href={`${baseUrl}#experience`}
+          class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        >
+          {t("nav.experience")}
         </a>
-        <a href={`${baseUrl}#contact`} class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-          {t('nav.contact')}
+        <a
+          href={`${baseUrl}#contact`}
+          class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        >
+          {t("nav.contact")}
         </a>
       </div>
     </div>
     <div class="flex items-center gap-4">
       <LanguageSelector />
-      <ThemeToggle />
+      <ThemeToggle client:load />
     </div>
   </div>
 </nav>

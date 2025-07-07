@@ -18,6 +18,11 @@ import VeritiLogoDark from '../assets/img/projects/veriti/veriti-logo-dark.png';
 import VeritiData from '../assets/img/projects/veriti/veriti-data.webp';
 import VeritiSession from '../assets/img/projects/veriti/veriti-session.webp';
 
+import CuentologiaLogo from '../assets/img/projects/cuentologia/cuentologia-logo.webp';
+import story1 from '../assets/img/projects/cuentologia/story1.webp';
+import story2 from '../assets/img/projects/cuentologia/story2.webp';
+import story3 from '../assets/img/projects/cuentologia/story3.webp';
+
 import type { languages } from "../i18n/ui";
 
 interface LocalizedProject {
@@ -42,10 +47,75 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "Cuentologia",
+    tags: ["OpenIA", "ChatGPT", "DALL-E", "Elevenlabs", "AWS", "NestJS"],
+    image: CuentologiaLogo.src,
+    images: [CuentologiaLogo.src, story1.src, story2.src, story3.src],
+    link: "https://www.cuentologia.com",
+    localized: {
+      en: {
+        title: "Cuentologia",
+        description: "Cuentologia is a children's story application that provides access to professionally crafted tales with sound effects and illustrations. My contribution focused on developing an AI-powered alternative that allows users to create custom stories in real time.",
+        fullDescription: `
+        <section>
+          <p>Cuentologia is a children's story application that provides access to professionally crafted tales with sound effects and illustrations. My contribution focused on developing an AI-powered alternative that allows users to create custom stories in real time.</p>
+          
+          <p class="mt-2">I implemented a system that integrates multiple AI technologies: ChatGPT for story generation, DALL-E for image creation, and ElevenLabs for text-to-speech conversion. All generated assets (texts, images, and audio) are efficiently stored and managed in AWS S3.</p>
+          <p>The application integrates audio creation and concatenation with multiple voices and background music using ffmpeg.</p>
+          <br />
+          <h3 class="font-bold">Key contributions:</h3>
+          <br />
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>AI integration:</strong> Developed the complete pipeline for generating stories, images, and audio using various AI APIs.
+            </li>
+            <li>
+              <strong>Cloud architecture:</strong> Designed and implemented the storage system using AWS S3 for all generated content.
+            </li>
+            <li>
+              <strong>Design patterns:</strong> Implemented a queue and RPM system to manage the generation of stories, images, and audio.
+            </li>
+          </ul>
+          <br />
+          <p>This project served as a testing ground for the AI technologies later implemented in Oneg, allowing us to validate the quality and user acceptance of AI-generated content with a base of 3000 active users.</p>
+        </section>
+        `
+      },
+      es: {
+        title: "Cuentología",
+        description: "Cuentología es una aplicación de cuentos infantiles que ofrece acceso a relatos profesionales con efectos de sonido e ilustraciones. Mi participación se centró en desarrollar una alternativa con IA que permite a los usuarios crear cuentos personalizados en tiempo real.",
+        fullDescription: `
+        <section>
+          <p>Cuentología es una aplicación de cuentos infantiles que ofrece acceso a relatos profesionales con efectos de sonido e ilustraciones. Mi participación se centró en desarrollar una alternativa con IA que permite a los usuarios crear cuentos personalizados en tiempo real.</p>
+          
+          <p class="mt-2">Implementé un sistema que integra múltiples tecnologías de IA: ChatGPT para la generación de historias, DALL-E para la creación de imágenes y ElevenLabs para la conversión de texto a voz. Todos los assets generados (textos, imágenes y audios) se almacenan y gestionan eficientemente en AWS S3.</p>
+          <p>La aplicación integra creación y concatenación de audios con múltiples voces y música de fondo con ffmpeg.</p>
+          <br />
+          <h3 class="font-bold">Principales contribuciones:</h3>
+          <br />
+          <ul class="list-disc list-inside">
+            <li>
+              <strong>Integración de IA:</strong> Desarrollé la pipeline completa para generar historias, imágenes y audio utilizando diversas APIs de IA.
+            </li>
+            <li>
+              <strong>Arquitectura en la nube:</strong> Diseñé e implementé el sistema de almacenamiento usando AWS S3 para todo el contenido generado.
+            </li>
+            <li>
+              <strong>Patrones de diseño</strong> Implementé manejos de colas y RPM para asegurar el correcto funcionamiento de la API en todo momento.
+            </li>
+          </ul>
+          <br />
+          <p>Este proyecto sirvió como banco de pruebas para las tecnologías de IA luego implementadas en Oneg, permitiéndonos validar la calidad y aceptación de los usuarios con una base de 3000 usuarios activos.</p>
+        </section>
+        `
+      }
+    }
+  },
+  {
     id: 'Oneg',
-    tags: ['NestJS', 'OpenIA', 'Elevenlabs', 'ChatGPT', 'DALL-E', 'MongoDB','Typescript'],
+    tags: ['NestJS', 'OpenIA', 'Elevenlabs', 'ChatGPT', 'DALL-E', 'MongoDB', 'Typescript'],
     image: OnegLogo.src,
-    images: [OnegLoader.src, OnegLanding.src,OnegPricing.src, OnegStories.src],
+    images: [OnegLoader.src, OnegLanding.src, OnegPricing.src, OnegStories.src],
     link: "https://play.google.com/store/apps/details?id=com.oneg.app",
     localized: {
       en: {
@@ -183,8 +253,8 @@ export const projects: Project[] = [
     localized: {
       en: {
         title: 'Veriti: Actionable Insights from Workshops',
-      description: 'Developed the frontend for an insights gathering platform.',
-      fullDescription: `
+        description: 'Developed the frontend for an insights gathering platform.',
+        fullDescription: `
       <div>
         <h2 class="font-bold">Veriti: Actionable Insights from Workshops</h2>
         <p>Developed the frontend for an insights gathering platform.</p>
@@ -195,8 +265,8 @@ export const projects: Project[] = [
       },
       es: {
         title: 'Veriti: Actionable Insights from Workshops',
-      description: 'Developed the frontend for an insights gathering platform.',
-      fullDescription: `
+        description: 'Developed the frontend for an insights gathering platform.',
+        fullDescription: `
       <div>
         <h2 class="font-bold">Veriti: Actionable Insights from Workshops</h2>
         <p>Desarrollamos el frontend para una plataforma de recopilación de insights.</p>
@@ -224,8 +294,9 @@ export const projects: Project[] = [
           <p>RIS Software is a web application that streamlines processes in medical diagnostic centers. My role was fundamental in developing the frontend, where I implemented functionalities to manage medical profiles, assign tasks, and visualize the status of medical studies. By optimizing the user interface and improving workflow efficiency, I contributed to better resource management and faster patient care.</p>
         </div>
         `,
-      }, 
-      es: {title: 'RIS Software',
+      },
+      es: {
+        title: 'RIS Software',
         description: 'Developed a web application to improve efficiency in medical diagnostic centers.',
         fullDescription: `
         <div>
@@ -238,7 +309,7 @@ export const projects: Project[] = [
       },
     },
     tags: ['React', 'Zustand', 'Firebase', 'Cost estimation'],
-    image: '', 
+    image: '',
     images: [],
   },
   {
@@ -246,8 +317,8 @@ export const projects: Project[] = [
     localized: {
       en: {
         title: 'Rolling Garage: Connecting Motorcycle Enthusiasts',
-      description: 'Modernized a motorcycle enthusiast platform to enhance user experience and performance.',
-      fullDescription: `
+        description: 'Modernized a motorcycle enthusiast platform to enhance user experience and performance.',
+        fullDescription: `
       <div>
         <h2 class="font-bold">Rolling Garage: Connecting Motorcycle Enthusiasts</h2>
         <p>Modernized a motorcycle enthusiast platform to enhance user experience and performance.</p>
@@ -259,8 +330,8 @@ export const projects: Project[] = [
       },
       es: {
         title: 'Rolling Garage: Connecting Motorcycle Enthusiasts',
-      description: 'Modernized a motorcycle enthusiast platform to enhance user experience and performance.',
-      fullDescription: `
+        description: 'Modernized a motorcycle enthusiast platform to enhance user experience and performance.',
+        fullDescription: `
       <div>
         <h2 class="font-bold">Rolling Garage: Conectando a los Entusiastas de las Motos</h2>
         <p>Modernizamos una plataforma para entusiastas de las motos para mejorar la experiencia del usuario y el rendimiento.</p>

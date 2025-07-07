@@ -23,6 +23,7 @@ const { project } = Astro.props;
         alt={project.localized[lang].title}
         class="w-full h-48 object-contain px-4 pt-3 text-red"
         transition:name={project.id}
+        loading="lazy"
       />
     )
   }
